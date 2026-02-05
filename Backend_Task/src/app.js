@@ -15,7 +15,10 @@ const port = process.env.PORT || 3000
 // }))
 
 app.use(cors({
-  origin: "https://blog-application.vercel.app",
+  origin: [
+    "http://localhost:5173",
+    "https://blog-application-delta-seven.vercel.app"
+  ],
   credentials: true
 }));
 
