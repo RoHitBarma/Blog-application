@@ -53,7 +53,7 @@ const registerUser = asyncHandler( async (req, res) => {
 
     const user = await User.create({
         username,
-        profilePic: profilePicture.url,
+        profilePic: profilePicture.secure_url,
         email,
         password
     })
