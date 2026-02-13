@@ -71,6 +71,7 @@ const registerUser = asyncHandler( async (req, res) => {
 
 // Login user
 const loginUser = asyncHandler( async(req, res) => {
+    console.log("🔥 LOGIN CONTROLLER HIT");
     // fields validate : all require fields are fill
     // check email must be available in database
     // check password is correct or not
