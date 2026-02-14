@@ -27,7 +27,7 @@ const Login = () => {
     setLoding(true)
 
     try{
-      const res = await axiosClient.post("/v1/users/login", {
+      const res = await axiosClient.post("/users/login", {
         email: loginData.email,
         password: loginData.password
       })
