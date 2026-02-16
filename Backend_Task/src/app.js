@@ -40,6 +40,10 @@ app.use("/api/v1/users", userRoutes)
 
 app.use("/api/v1/posts", blogRouter)
 
+app.get("/test-route", (req, res) => {
+  res.send("TEST ROUTE WORKING");
+});
+
 app.get('/', (req, res) => {
   res.send('Hello World!!!!!')
 })
