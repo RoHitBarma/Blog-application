@@ -21,7 +21,7 @@ const CreatePost = () => {
     try{
         setLoading(true)
 
-        const res = await axiosClient.post("/v1/posts", {
+        const res = await axiosClient.post("/posts", {
             title,
             description: content
         })
