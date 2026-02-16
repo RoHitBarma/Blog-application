@@ -49,7 +49,7 @@ const Register = () => {
       data.append("profilePic", formData.profilePic);
     }
 
-    const res = await axiosClient.post("/v1/users/register", data, {
+    const res = await axiosClient.post("/users/register", data, {
       headers: {
         "Content-Type": "multipart/form-data",  // yaha puchna hai
       },
