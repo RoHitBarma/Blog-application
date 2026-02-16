@@ -115,7 +115,7 @@ const PostDetails = () => {
   useEffect(() => {
     async function fetchPost() {
       try {
-        const res = await axiosClient.get(`/v1/posts/${id}`);
+        const res = await axiosClient.get(`/posts/${id}`);
         setPost(res.data.data);
       } catch (err) {
         console.error(err);

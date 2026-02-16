@@ -14,7 +14,7 @@ const EditPost = () => {
 
         async function fetchPost() {
             try{
-               const res = await axiosClient.get(`/v1/posts/${id}`) 
+               const res = await axiosClient.get(`/posts/${id}`) 
                setTitle(res.data.data.title)
                setContent(res.data.data.description)
             }catch(err){

@@ -11,7 +11,7 @@ const Dashboard = () => {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const res = await axiosClient.get("/v1/posts");
+        const res = await axiosClient.get("/posts");
 
         // backend response structure:
         // res.data.data = blogs array
