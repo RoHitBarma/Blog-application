@@ -8,7 +8,7 @@ const DashboardNavbar = () => {
 
   const handleLogout = () => {
     logout();
-    navigate("/login");
+    navigate("/login", {replace: true});
   };
   
   return (
@@ -16,17 +16,6 @@ const DashboardNavbar = () => {
         <h1 className='text-xl font-bold'>Dashboard</h1>
 
         <div className="flex items-center gap-4">
-            {/* <span>
-                👋{user?.name || "User"}
-            </span>
-
-            <button
-                onClick={handleLogout}
-                className="bg-red-500 text-white px-4 py-2 rounded-md text-sm hover:bg-red-600"
-            >
-                Logout
-            </button> */}
-
             {user ? (
                 <div className="flex items-center gap-3">
                     {/* Profile Pic */}
@@ -43,7 +32,7 @@ const DashboardNavbar = () => {
 
                     {/* Logout */}
                     <button
-                    onClick={logout}
+                    onClick={handleLogout}
                     className="text-sm text-red-500 hover:underline"
                     >
                     Logout

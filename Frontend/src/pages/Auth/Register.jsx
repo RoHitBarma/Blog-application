@@ -11,6 +11,7 @@ const Register = () => {
     password: "",
     profilePic: null
   })
+  const [registering, setRegistering] = useState(false)
 
   const handleChange = (e) => {
     setFormData({
@@ -129,9 +130,10 @@ const Register = () => {
               {/* buttons */}
                 <button 
                   type='submit'
+                  disabled={registering}
                   className='w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded-lg transition duration-200'
                 >
-                  Create Account
+                  {registering ? "Logging in..." : "Create Account"}
                 </button>
               
             </form>
